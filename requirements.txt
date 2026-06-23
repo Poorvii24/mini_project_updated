@@ -4,7 +4,7 @@
 #  keep a separate requirements-api.txt locally if you run api.py too)
 # =============================================================================
 
-torch==2.12.1
+torch==2.1.0
 streamlit==1.35.0
 pandas==2.1.4
 numpy==1.26.4

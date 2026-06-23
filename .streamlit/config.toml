@@ -1,0 +1,21 @@
+# =============================================================================
+# .streamlit/config.toml — Streamlit configuration for SST-Net
+# =============================================================================
+
+[server]
+headless            = true
+port                = 8501
+enableCORS          = false
+enableXsrfProtection = true
+maxUploadSize       = 200        # MB — allow large CTU-13 CSVs
+
+[browser]
+gatherUsageStats    = false
+
+[theme]
+base                = "dark"
+primaryColor        = "#00ffcc"
+backgroundColor     = "#0a0e17"
+secondaryBackgroundColor = "#111827"
+textColor           = "#ffffff"
+font                = "monospace"

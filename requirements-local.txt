@@ -1,0 +1,15 @@
+# =============================================================================
+# requirements-local.txt
+# Extra dependencies needed ONLY for local development:
+#   - api.py (FastAPI backend)
+#   - Live Scapy packet capture
+# Not needed for the Streamlit Cloud deployment of app.py.
+#
+# Install with: pip install -r requirements.txt -r requirements-local.txt
+# =============================================================================
+
+fastapi==0.111.0
+uvicorn==0.29.0
+python-multipart==0.0.9
+httpx==0.27.0
+scapy==2.5.0

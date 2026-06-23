@@ -1,0 +1,19 @@
+[
+  "Duration",
+  "Proto",
+  "Sport",
+  "Dir",
+  "Dport",
+  "State",
+  "sTos",
+  "dTos",
+  "TotPkts",
+  "TotBytes",
+  "SrcBytes",
+  "BytesPerSec",
+  "PktsPerSec",
+  "AvgPktSize",
+  "SrcByteRatio",
+  "Sport_is_priv",
+  "Dport_is_priv"
+]

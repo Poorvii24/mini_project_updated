@@ -1,0 +1,41 @@
+# =============================================================================
+# docker-compose.yml — SST-Net Botnet Detection Dashboard
+#
+# Usage:
+#   docker-compose up --build       ← first time
+#   docker-compose up               ← subsequent runs
+#   docker-compose down             ← stop
+# =============================================================================
+
+version: "3.9"
+
+services:
+  sst-net:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: sst_net_dashboard
+    image: sst-net:latest
+
+    ports:
+      - "8501:8501"       # Streamlit dashboard → http://localhost:8501
+
+    volumes:
+      # Mount models folder so you can update scaler.pkl and .pt file
+      # without rebuilding the Docker image
+      - ./models:/app/models:ro
+      # Mount utils so code changes reflect immediately (dev mode)
+      - ./utils:/app/utils:ro
+
+    environment:
+      - PYTHONUNBUFFERED=1
+      - STREAMLIT_BROWSER_GATHER_USAGE_STATS=false
+
+    restart: unless-stopped
+
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:8501/_stcore/health"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 30s

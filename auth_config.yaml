@@ -1,0 +1,34 @@
+# =============================================================================
+# auth_config.yaml — SST-Net Authentication Configuration
+#
+# DEFAULT CREDENTIALS:
+#   Admin   → username: admin    password: admin123
+#   Analyst → username: analyst  password: analyst123
+#
+# TO CHANGE PASSWORDS:
+#   Run this in Python and replace the hash below:
+#   import streamlit_authenticator as stauth
+#   print(stauth.Hasher().hash('your_new_password'))
+#
+# ROLES:
+#   admin   → full access (view + block IPs + download reports)
+#   analyst → read-only (view dashboard, SHAP, MITRE — no block/download)
+# =============================================================================
+
+credentials:
+  usernames:
+    admin:
+      name: "Administrator"
+      password: "$2b$12$nbn.7KXUFLQ8fqMdyos8QeTqHDYqdqrTgDRoGLugw5jzqwMcUkp1e"
+      role: "admin"
+      email: "admin@sst-net.local"
+    analyst:
+      name: "Security Analyst"
+      password: "$2b$12$aAFnnbUAqvIUMZu/Os2uGutZ6lTDe8J0VShsM6oSda7FaE0cRzvd6"
+      role: "analyst"
+      email: "analyst@sst-net.local"
+
+cookie:
+  name: "sst_net_auth"
+  key: "sst_net_secret_key_change_in_production"
+  expiry_days: 1

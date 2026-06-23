@@ -1,0 +1,18 @@
+# =============================================================================
+# requirements.txt — Streamlit Cloud compatible
+# (FastAPI/uvicorn/scapy excluded — not used by the Streamlit dashboard;
+#  keep a separate requirements-api.txt locally if you run api.py too)
+# =============================================================================
+
+torch==2.1.0
+streamlit==1.35.0
+pandas==2.1.4
+numpy==1.26.4
+scikit-learn==1.5.0
+plotly==5.22.0
+joblib==1.4.2
+shap==0.45.1
+pyarrow==16.0.0
+streamlit-authenticator==0.4.2
+pyyaml==6.0.1
+requests==2.31.0

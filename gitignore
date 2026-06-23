@@ -1,0 +1,30 @@
+# =============================================================================
+# .gitignore — SST-Net
+# Keeps secrets and local junk out of the public GitHub repo
+# =============================================================================
+
+# Secrets — NEVER commit these
+config.py
+.streamlit/secrets.toml
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+.venv/
+venv/
+env/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Large local-only files (replay test CSVs you don't want public)
+*.csv
+!sample_data/*.csv
+
+# Logs
+*.log
+
+# Jupyter
+.ipynb_checkpoints/
